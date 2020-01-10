@@ -4,11 +4,10 @@ on:
   release:
     types:
       - created
-    tags:
-      - tag-a-*
 
 jobs:
   build:
+    if: github.ref == "tag-b-1"
 
     runs-on: ubuntu-latest
 

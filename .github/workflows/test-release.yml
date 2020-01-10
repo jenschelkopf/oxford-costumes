@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: github.ref == 'refs/tags/tag-b-*'
+    if: contains(github.ref, 'refs/tags/tag-b-')
     
     runs-on: ubuntu-latest
 

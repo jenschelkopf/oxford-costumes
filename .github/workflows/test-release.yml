@@ -6,7 +6,7 @@ on:
       - created
 
 jobs:
-  build:
+  release-b:
     if: contains(github.ref, 'refs/tags/tag-b-')
     
     runs-on: ubuntu-latest

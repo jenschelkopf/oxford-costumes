@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: github.ref == 'refs/tags/tag-b-2'
+    if: github.ref == 'refs/tags/tag-b-*'
     
     runs-on: ubuntu-latest
 

@@ -7,7 +7,8 @@ on:
 
 jobs:
   build:
-
+    if: github.ref == 'refs/tags/tag-b-2'
+    
     runs-on: ubuntu-latest
 
     strategy:

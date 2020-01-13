@@ -12,7 +12,7 @@
     "serve": "^11.3.0"
   },
   "scripts": {
-    "start:prod": "ls node_modules && serve -s build",
+    "start:prod": "node -v && serve -s build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

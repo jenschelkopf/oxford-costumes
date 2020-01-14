@@ -21,9 +21,7 @@ jobs:
       run: npm ci
       env:
         CI: true
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v1
     - uses: actions/upload-artifact@v1
       with:
         name: node-modules
-        path: ./node-modules
+        path: ./node_modules

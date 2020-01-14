@@ -8,14 +8,14 @@ jobs:
 
     steps:
       - name: Lint Step
-        run: echo "Lint start" & sleep 5 & echo "Lint end"
+        run: echo "Lint start" && sleep 5 && echo "Lint end"
 
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Build Step
-        run: echo "Build start" & sleep 10 & echo "Build end"
+        run: echo "Build start" && sleep 10 && echo "Build end"
 
   report:
     needs: [lint, build]

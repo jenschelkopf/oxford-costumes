@@ -3,6 +3,13 @@ name: Fan
 on: [push]
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lint Step
+        run: echo "Lint start" & sleep 5 & echo "Lint end"
+
   build:
     runs-on: ubuntu-latest
 
@@ -11,7 +18,7 @@ jobs:
         run: echo "Build start" & sleep 10 & echo "Build end"
 
   report:
-    needs: [build]
+    needs: [lint, build]
     runs-on: ubuntu-latest
 
     steps:

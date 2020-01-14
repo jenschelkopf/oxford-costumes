@@ -1,0 +1,27 @@
+name: Share data
+
+on: [push]
+
+jobs:
+  install:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install
+      run: npm ci
+      env:
+        CI: true
+    - uses: actions/upload-artifact@v1
+      with:
+        name: node-modules
+        path: ./node_modules
